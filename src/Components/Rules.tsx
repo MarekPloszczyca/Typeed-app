@@ -1,8 +1,12 @@
 import styles from "./Rules.module.scss";
 
-export default function Rules() {
+interface Props{
+  rules:() => void;
+}
+
+export default function Rules(props:Props) {
   return (
-    <div className={styles.rules}>
+    <div className={styles.rules} onClick={props.rules}>
       <h4>RULES</h4>
       <ul>
         <li>You have 60 seconds</li>

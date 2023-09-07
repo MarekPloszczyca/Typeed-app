@@ -1,6 +1,6 @@
 import styles from "./Warning.module.scss";
 
-type Props = {
+interface Props {
     warning : () => void
 }
 

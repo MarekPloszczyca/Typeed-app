@@ -1,18 +1,29 @@
 .rules{
-    background-color: #E9D985;
+    background-color: #ffffff;
     margin:0 1rem;
     padding:1rem;
     font-size: 2rem;
-    border:solid 0.2rem;
+    font-weight: bold;
+    border:solid 0.1rem #39d5fc;
     border-radius:1rem;
 }
 .rules h4{
-    color:#5D4A66;
+    color:#39d5fc;
     text-align: center;
     padding-bottom:1rem;
 }
 .rules ul{
+    color:#4c4b4b;
     margin-left:0.8rem;
     font-size:1.3rem;
     line-height: 2.5rem;
+    padding-bottom:1rem;
+    list-style: none;
+}
+.rules ul li::before{
+    content :"\2022";
+    display:inline-block;
+    margin-left:-1rem;
+    width:1rem;
+    color:#39d5fc;
 }
