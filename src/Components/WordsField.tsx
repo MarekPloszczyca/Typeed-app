@@ -3,15 +3,15 @@ import styles from "./WordsField.module.scss";
 
 interface Props {
   current: string;
-  next: string;
+  points: number;
   color:string;
 }
 
 export default function WordsField(props: Props) {
   return (
     <Fragment>
-      <div className={styles.nextWord}>
-        <p>{props.next}</p>
+      <div className={styles.points}>
+        <p>{props.points}</p>
       </div>
       <div className={styles.currentWord}>
         <p className={props.color}>{props.current}</p>

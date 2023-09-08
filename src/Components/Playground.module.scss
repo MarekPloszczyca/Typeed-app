@@ -1,28 +1,62 @@
-.playground {
+%playground {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.playground{
+  @extend %playground;
+}
+.playground-centered{
+  @extend %playground;
+  justify-content: center;
+}
+
+
 .playground input {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 6rem;
   padding: 2rem 0.1rem;
   border-radius: 1rem;
   border: solid 0.1rem #39d5fc;
-  
 }
-.playground input:focus{
-    outline:none;
-    background-color: #f6fbfe;
+.playground input:focus {
+  outline: none;
+  background-color: #f6fbfe;
 }
-.wrong{
-  color:#4c4b4b;
+
+@keyframes wrongInput {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 1rem;
+  }
+  50% {
+    left: -1rem;
+  }
+  75% {
+    left: 1rem;
+  }
+  100% {
+    left: 0;
+  }
 }
-.correct{
-  color:#39d5fc;
+
+.wrongInput {
+  position: relative;
+  border-color: rgb(253, 32, 32) !important;
+  background-color: rgb(250, 207, 207) !important;
+  animation-name: wrongInput;
+  animation-duration: 0.2s;
+}
+.wrong {
+  color: #4c4b4b;
+}
+.correct {
+  color: #39d5fc;
 }

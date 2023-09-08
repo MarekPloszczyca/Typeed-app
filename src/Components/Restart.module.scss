@@ -1,0 +1,35 @@
+.restart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color:#39d5fc;
+    background-color: #ffffff;
+    padding:1rem;
+    width:15rem;
+    border:solid 0.1rem #39d5fc;
+    border-radius: 1rem;
+}
+.restart p {
+    font-size: 2rem;
+    font-family: bold;
+    margin:0.5rem 0 3rem 0;
+}
+.restart div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+}
+.restart button{
+    width:3rem;
+    height:3rem;
+    font-size: 1rem;
+    border-radius:50%;
+}
+.green{
+    background-color: #10d202;
+}
+.red{
+    background-color: rgb(250, 28, 28);
+}
