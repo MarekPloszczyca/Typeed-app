@@ -33,6 +33,13 @@ function App() {
     userReady ? setUserReady(false) : setUserReady(true);
   };
 
+  const closingRestartHandler = () => {
+    gameHandler();
+    userConfirmationHandler();
+  }
+
+
+
   const clickButton = (event: React.MouseEvent<HTMLInputElement>) => {
     const buttonType = event.currentTarget.textContent;
     if (buttonType === "PLAY") {
@@ -59,7 +66,7 @@ function App() {
       {!gameOpen && !rulesOpen && !mobileWarning && userReady && (
         <Confirmation type={confirmationHandler} />
       )}
-      {gameOpen && <Playground />}
+      {gameOpen && <Playground onClosePlayground = {closingRestartHandler}/>}
     </Container>
   );
 }
