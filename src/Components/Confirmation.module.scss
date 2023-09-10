@@ -6,7 +6,8 @@
     color:#39d5fc;
     background-color: #ffffff;
     padding:1rem;
-    width:15rem;
+    width:80%;
+    max-width:23rem;
     border:solid 0.1rem #39d5fc;
     border-radius: 1rem;
 }
@@ -24,12 +25,14 @@
 .confirmation button{
     width:3rem;
     height:3rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius:50%;
+    border:solid 0.1rem #39d5fc;
+    color:#05008f;
 }
-.green{
-    background-color: #10d202;
+.accept{
+    background-color: #02dbe7;
 }
-.red{
-    background-color: rgb(250, 28, 28);
+.decline{
+    background-color: #2f63ff;
 }

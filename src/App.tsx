@@ -15,9 +15,9 @@ function App() {
   const [userReady, setUserReady] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setMobileWarning(true);
-    }, 1000);
+    if (window.innerWidth < 1024) {
+      return setMobileWarning(true);
+    }
   }, []);
 
   const warningHandler = () => {
@@ -36,9 +36,7 @@ function App() {
   const closingRestartHandler = () => {
     gameHandler();
     userConfirmationHandler();
-  }
-
-
+  };
 
   const clickButton = (event: React.MouseEvent<HTMLInputElement>) => {
     const buttonType = event.currentTarget.textContent;
@@ -48,7 +46,7 @@ function App() {
   };
   const confirmationHandler = (event: React.MouseEvent<HTMLInputElement>) => {
     const type = event.currentTarget.className;
-    if (type.includes("green")) {
+    if (type.includes("accept")) {
       return gameHandler();
     } else return userConfirmationHandler();
   };
@@ -66,7 +64,7 @@ function App() {
       {!gameOpen && !rulesOpen && !mobileWarning && userReady && (
         <Confirmation type={confirmationHandler} />
       )}
-      {gameOpen && <Playground onClosePlayground = {closingRestartHandler}/>}
+      {gameOpen && <Playground onClosePlayground={closingRestartHandler} />}
     </Container>
   );
 }

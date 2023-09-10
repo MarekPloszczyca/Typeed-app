@@ -29,7 +29,7 @@ export default function Playground(props: Props) {
   const [time, setTime] = useState(60);
   const [restart, setRestart] = useState(false);
 
-  const randomNumber = Math.floor(Math.random() * (600 - 1 + 1)) + 1;
+  const randomNumber = Math.floor(Math.random() * 600 ) 
 
   const wordsComparison = (userInput: string, word: string) => {
     userInput === word ? setColor(styles.correct) : setColor(styles.wrong);
@@ -80,7 +80,7 @@ export default function Playground(props: Props) {
 
   const restartHandler = (event: React.MouseEvent<HTMLInputElement>) => {
     const type = event.currentTarget.className;
-    if (type.includes("green")) {
+    if (type.includes("accept")) {
       setTime(60);
       setPoints(0);
       setCurrentWord(allWords[randomNumber]);

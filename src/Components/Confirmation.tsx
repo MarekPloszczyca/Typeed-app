@@ -5,16 +5,21 @@ interface Props {
   type: MouseEventHandler;
 }
 
+const buttonType = {
+  accept: "\u{02713}",
+  decline: "\u{2715}",
+};
+
 export default function Confirmation(props: Props) {
   return (
     <div className={styles.confirmation}>
       <p>Are you ready?</p>
       <div>
-        <button className={styles.green} onClick={props.type} autoFocus>
-          &#x2713;
+        <button className={styles.accept} onClick={props.type} autoFocus>
+          {buttonType.accept}
         </button>
-        <button className={styles.red} onClick={props.type}>
-          &#10006;
+        <button className={styles.decline} onClick={props.type}>
+          {buttonType.decline}
         </button>
       </div>
     </div>
