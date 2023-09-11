@@ -48,9 +48,7 @@ export default function Playground(props: Props) {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
       setCurrentWord(allWords[0]);
-    });
   }, [allWords]);
 
   useEffect(() => {
@@ -76,6 +74,7 @@ export default function Playground(props: Props) {
   const wordsChanger = () => {
     setCurrentWord(allWords[randomNumber]);
     setWord("");
+    console.log(randomNumber);
   };
 
   const restartHandler = (event: React.MouseEvent<HTMLInputElement>) => {
@@ -94,7 +93,7 @@ export default function Playground(props: Props) {
         {!restart && (
           <Fragment>
             <Timer time={time} />
-            <WordsField current={currentWord} points={points} color={color} />
+            <WordsField current={currentWord}  color={color} />
             <input
               type="text"
               value={word}

@@ -30,6 +30,15 @@
     border:solid 0.1rem #39d5fc;
     color:#05008f;
 }
+.confirmation button:focus{
+    outline: none;
+}
+.confirmation button:hover{
+    cursor: pointer;
+    position: relative;
+    left:0.1rem;
+    top:0.1rem;
+}
 .accept{
     background-color: #02dbe7;
 }
